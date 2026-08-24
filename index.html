@@ -1,0 +1,1606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>P. Yagna | Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+:root{
+    --pink:#ff3cac;
+    --purple:#784ba0;
+    --blue:#2b86c5;
+    --dark:#070718;
+    --dark2:#10102b;
+    --white:#fff;
+    --gray:#b7b7cc;
+}
+
+body{
+    font-family:"Inter",sans-serif;
+    background:var(--dark);
+    color:white;
+    overflow-x:hidden;
+}
+
+a{
+    color:white;
+    text-decoration:none;
+}
+
+section{
+    padding:100px 8%;
+    position:relative;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-title span{
+    color:var(--pink);
+    text-transform:uppercase;
+    font-size:14px;
+    font-weight:700;
+    letter-spacing:3px;
+}
+
+.section-title h2{
+    font-size:45px;
+    margin-top:12px;
+    font-family:"Playfair Display",serif;
+}
+
+.section-title p{
+    color:var(--gray);
+    margin-top:15px;
+}
+
+/* BACKGROUND */
+
+body::before{
+    content:"";
+    position:fixed;
+    width:500px;
+    height:500px;
+    background:var(--pink);
+    filter:blur(180px);
+    opacity:.15;
+    top:-150px;
+    left:-150px;
+    z-index:-2;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    width:500px;
+    height:500px;
+    background:#6c3cff;
+    filter:blur(180px);
+    opacity:.15;
+    right:-150px;
+    bottom:-150px;
+    z-index:-2;
+}
+
+/* NAVBAR */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    background:rgba(7,7,24,.7);
+    backdrop-filter:blur(20px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.navbar{
+    max-width:1250px;
+    margin:auto;
+    height:75px;
+    padding:0 25px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    font-size:27px;
+    font-weight:800;
+}
+
+.logo span{
+    color:var(--pink);
+}
+
+.nav-links{
+    display:flex;
+    gap:35px;
+    list-style:none;
+}
+
+.nav-links a{
+    font-size:14px;
+    color:#ddd;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:var(--pink);
+}
+
+.cv-btn{
+    padding:11px 20px;
+    border:1px solid var(--pink);
+    border-radius:30px;
+    font-size:13px;
+    transition:.4s;
+}
+
+.cv-btn:hover{
+    background:var(--pink);
+    box-shadow:0 0 25px rgba(255,60,172,.5);
+}
+
+.menu{
+    display:none;
+    font-size:25px;
+    cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    padding-top:120px;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+}
+
+.hero-grid{
+    max-width:1200px;
+    width:100%;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:50px;
+}
+
+.hero-content{
+    animation:slideLeft 1.2s ease;
+}
+
+.small-title{
+    color:var(--pink);
+    font-size:18px;
+    font-weight:600;
+    margin-bottom:15px;
+}
+
+.hero h1{
+    font-size:75px;
+    line-height:1;
+    font-weight:800;
+}
+
+.hero h1 span{
+    background:linear-gradient(90deg,var(--pink),#a66cff,#2b86c5);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.hero h3{
+    margin-top:25px;
+    font-size:25px;
+    font-weight:500;
+}
+
+.hero h3 span{
+    color:var(--pink);
+}
+
+.hero p{
+    margin-top:20px;
+    max-width:580px;
+    color:var(--gray);
+    line-height:1.8;
+    font-size:16px;
+}
+
+.hero-buttons{
+    margin-top:35px;
+    display:flex;
+    gap:20px;
+}
+
+.btn{
+    padding:14px 28px;
+    border-radius:30px;
+    font-weight:600;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    transition:.4s;
+}
+
+.btn-primary{
+    background:linear-gradient(90deg,var(--pink),#784ba0);
+}
+
+.btn-primary:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 35px rgba(255,60,172,.35);
+}
+
+.btn-outline{
+    border:1px solid rgba(255,255,255,.3);
+}
+
+.btn-outline:hover{
+    border-color:var(--pink);
+    color:var(--pink);
+}
+
+/* WOMAN */
+
+.hero-image{
+    height:580px;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    animation:fadeIn 1.5s ease;
+}
+
+.circle{
+    width:440px;
+    height:440px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#ff3cac,#784ba0,#2b86c5);
+    opacity:.25;
+    position:absolute;
+    filter:blur(5px);
+    animation:pulse 4s infinite;
+}
+
+.woman{
+    position:relative;
+    z-index:2;
+    width:360px;
+    height:500px;
+    animation:float 4s ease-in-out infinite;
+}
+
+.head{
+    position:absolute;
+    top:35px;
+    left:135px;
+    width:90px;
+    height:105px;
+    background:#c98263;
+    border-radius:48% 48% 45% 45%;
+    z-index:5;
+}
+
+.hair{
+    position:absolute;
+    top:15px;
+    left:112px;
+    width:135px;
+    height:170px;
+    background:#171323;
+    border-radius:60% 55% 45% 55%;
+    z-index:6;
+}
+
+.hair::after{
+    content:"";
+    position:absolute;
+    width:70px;
+    height:180px;
+    background:#171323;
+    right:-30px;
+    top:45px;
+    border-radius:50%;
+}
+
+.eye{
+    position:absolute;
+    top:78px;
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:#222;
+    z-index:8;
+}
+
+.eye.left{
+    left:160px;
+}
+
+.eye.right{
+    left:195px;
+}
+
+.mouth{
+    position:absolute;
+    top:105px;
+    left:173px;
+    width:20px;
+    height:8px;
+    border-bottom:2px solid #8e403e;
+    border-radius:50%;
+    z-index:8;
+}
+
+.body{
+    position:absolute;
+    top:135px;
+    left:100px;
+    width:165px;
+    height:230px;
+    background:#17152b;
+    clip-path:polygon(20% 0,80% 0,100% 100%,0 100%);
+    z-index:4;
+}
+
+.shirt{
+    position:absolute;
+    top:150px;
+    left:143px;
+    width:80px;
+    height:100px;
+    background:white;
+    clip-path:polygon(50% 0,100% 100%,0 100%);
+    z-index:5;
+}
+
+.leg{
+    position:absolute;
+    top:350px;
+    width:50px;
+    height:150px;
+    background:#17152b;
+    border-radius:20px;
+    z-index:3;
+    transform-origin:top;
+}
+
+.leg.left{
+    left:130px;
+    transform:rotate(12deg);
+    animation:walkLeft 1s infinite alternate;
+}
+
+.leg.right{
+    left:190px;
+    transform:rotate(-12deg);
+    animation:walkRight 1s infinite alternate;
+}
+
+.shoe{
+    position:absolute;
+    width:70px;
+    height:25px;
+    background:#05050d;
+    border-radius:50%;
+    z-index:4;
+}
+
+.shoe.one{
+    top:480px;
+    left:105px;
+}
+
+.shoe.two{
+    top:480px;
+    left:205px;
+}
+
+.bag{
+    position:absolute;
+    top:230px;
+    right:30px;
+    width:70px;
+    height:80px;
+    background:#7a3e25;
+    border-radius:8px;
+    z-index:7;
+    transform:rotate(8deg);
+}
+
+.bag::before{
+    content:"";
+    position:absolute;
+    top:-25px;
+    left:12px;
+    width:45px;
+    height:40px;
+    border:5px solid #7a3e25;
+    border-bottom:0;
+    border-radius:30px 30px 0 0;
+}
+
+/* FLOATING CARDS */
+
+.floating-card{
+    position:absolute;
+    padding:15px 20px;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.12);
+    backdrop-filter:blur(20px);
+    border-radius:15px;
+    animation:float 4s infinite ease-in-out;
+    z-index:10;
+}
+
+.card1{
+    top:90px;
+    right:0;
+}
+
+.card2{
+    bottom:80px;
+    left:0;
+    animation-delay:1s;
+}
+
+.floating-card i{
+    color:var(--pink);
+    margin-right:8px;
+}
+
+/* SOCIAL */
+
+.social{
+    display:flex;
+    gap:15px;
+    margin-top:30px;
+}
+
+.social a{
+    width:40px;
+    height:40px;
+    border:1px solid rgba(255,255,255,.2);
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    transition:.3s;
+}
+
+.social a:hover{
+    background:var(--pink);
+    transform:translateY(-5px);
+}
+
+/* ABOUT */
+
+.about{
+    background:rgba(255,255,255,.02);
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:400px 1fr;
+    gap:70px;
+    align-items:center;
+}
+
+.about-img-box{
+    width:330px;
+    height:400px;
+    margin:auto;
+    border-radius:30px;
+    background:linear-gradient(135deg,#ff3cac,#784ba0);
+    padding:5px;
+    transform:rotate(-3deg);
+}
+
+.about-img-inner{
+    width:100%;
+    height:100%;
+    border-radius:25px;
+    background:
+    linear-gradient(rgba(10,10,30,.25),rgba(10,10,30,.7)),
+    url("https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=700&q=80");
+    background-size:cover;
+    background-position:center;
+}
+
+.about-content h3{
+    font-size:35px;
+    margin-bottom:20px;
+}
+
+.about-content p{
+    color:var(--gray);
+    line-height:1.9;
+    margin-bottom:15px;
+}
+
+.about-info{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+    margin-top:30px;
+}
+
+.info-box{
+    padding:18px;
+    background:rgba(255,255,255,.04);
+    border-radius:12px;
+    border-left:3px solid var(--pink);
+}
+
+.info-box strong{
+    display:block;
+    margin-bottom:5px;
+}
+
+.info-box span{
+    color:var(--gray);
+}
+
+/* SKILLS */
+
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.skill-card{
+    padding:30px;
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:20px;
+    transition:.4s;
+}
+
+.skill-card:hover{
+    transform:translateY(-10px);
+    border-color:var(--pink);
+}
+
+.skill-icon{
+    font-size:35px;
+    color:var(--pink);
+    margin-bottom:20px;
+}
+
+.skill-card h3{
+    margin-bottom:10px;
+}
+
+.skill-card p{
+    color:var(--gray);
+    font-size:14px;
+}
+
+.progress{
+    height:6px;
+    background:#29293e;
+    border-radius:10px;
+    margin-top:20px;
+    overflow:hidden;
+}
+
+.progress span{
+    display:block;
+    height:100%;
+    background:linear-gradient(90deg,var(--pink),#784ba0);
+    width:0;
+    transition:2s;
+}
+
+/* PROJECTS */
+
+.projects{
+    background:rgba(255,255,255,.02);
+}
+
+.project-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+}
+
+.project-card{
+    background:#111128;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:20px;
+    overflow:hidden;
+    transition:.5s;
+}
+
+.project-card:hover{
+    transform:translateY(-12px);
+    border-color:var(--pink);
+}
+
+.project-img{
+    height:230px;
+    background-size:cover;
+    background-position:center;
+}
+
+.project-img.one{
+    background-image:url("https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80");
+}
+
+.project-img.two{
+    background-image:url("https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80");
+}
+
+.project-img.three{
+    background-image:url("https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=80");
+}
+
+.project-img.four{
+    background-image:url("https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=900&q=80");
+}
+
+.project-content{
+    padding:25px;
+}
+
+.project-content h3{
+    font-size:22px;
+    margin-bottom:10px;
+}
+
+.project-content p{
+    color:var(--gray);
+    line-height:1.7;
+    font-size:14px;
+}
+
+.tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-top:20px;
+}
+
+.tags span{
+    padding:6px 12px;
+    background:rgba(255,60,172,.1);
+    border-radius:20px;
+    color:#ff8bca;
+    font-size:12px;
+}
+
+/* EXPERIENCE */
+
+.timeline{
+    max-width:900px;
+    margin:auto;
+    position:relative;
+}
+
+.timeline::before{
+    content:"";
+    position:absolute;
+    left:50%;
+    top:0;
+    bottom:0;
+    width:2px;
+    background:linear-gradient(var(--pink),#784ba0);
+}
+
+.timeline-item{
+    width:50%;
+    padding:20px 40px;
+    position:relative;
+}
+
+.timeline-item:nth-child(odd){
+    left:0;
+    text-align:right;
+}
+
+.timeline-item:nth-child(even){
+    left:50%;
+}
+
+.timeline-dot{
+    position:absolute;
+    width:16px;
+    height:16px;
+    background:var(--pink);
+    border-radius:50%;
+    top:35px;
+}
+
+.timeline-item:nth-child(odd) .timeline-dot{
+    right:-8px;
+}
+
+.timeline-item:nth-child(even) .timeline-dot{
+    left:-8px;
+}
+
+.timeline-content{
+    padding:25px;
+    background:rgba(255,255,255,.04);
+    border-radius:18px;
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.timeline-content h3{
+    color:var(--pink);
+}
+
+.timeline-content h4{
+    margin:8px 0;
+}
+
+.timeline-content p{
+    color:var(--gray);
+    font-size:14px;
+    line-height:1.7;
+}
+
+/* CONTACT */
+
+.contact{
+    background:rgba(255,255,255,.02);
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+}
+
+.contact-info h3{
+    font-size:35px;
+    margin-bottom:20px;
+}
+
+.contact-info p{
+    color:var(--gray);
+    line-height:1.8;
+}
+
+.contact-item{
+    display:flex;
+    gap:20px;
+    align-items:center;
+    margin-top:25px;
+}
+
+.contact-icon{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:rgba(255,60,172,.1);
+    color:var(--pink);
+}
+
+.contact-item span{
+    color:var(--gray);
+}
+
+.contact-form{
+    padding:35px;
+    background:rgba(255,255,255,.04);
+    border-radius:25px;
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.form-group{
+    margin-bottom:20px;
+}
+
+.form-group input,
+.form-group textarea{
+    width:100%;
+    padding:16px;
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:10px;
+    background:rgba(0,0,0,.2);
+    color:white;
+    outline:none;
+    font-family:inherit;
+}
+
+.form-group textarea{
+    height:140px;
+    resize:none;
+}
+
+.submit{
+    width:100%;
+    border:0;
+    cursor:pointer;
+    justify-content:center;
+}
+
+/* FOOTER */
+
+footer{
+    padding:30px 8%;
+    text-align:center;
+    border-top:1px solid rgba(255,255,255,.08);
+    color:var(--gray);
+}
+
+footer span{
+    color:var(--pink);
+}
+
+/* ANIMATIONS */
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-15px);
+    }
+}
+
+@keyframes pulse{
+    0%,100%{
+        transform:scale(1);
+        opacity:.2;
+    }
+    50%{
+        transform:scale(1.08);
+        opacity:.35;
+    }
+}
+
+@keyframes slideLeft{
+    from{
+        opacity:0;
+        transform:translateX(-80px);
+    }
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:scale(.8);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+@keyframes walkLeft{
+    from{transform:rotate(15deg);}
+    to{transform:rotate(-18deg);}
+}
+
+@keyframes walkRight{
+    from{transform:rotate(-18deg);}
+    to{transform:rotate(15deg);}
+}
+
+.reveal{
+    opacity:0;
+    transform:translateY(60px);
+    transition:1s;
+}
+
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .nav-links{
+        position:absolute;
+        top:75px;
+        left:-100%;
+        width:100%;
+        background:#09091f;
+        flex-direction:column;
+        padding:30px;
+        text-align:center;
+        transition:.4s;
+    }
+
+    .nav-links.active{
+        left:0;
+    }
+
+    .menu{
+        display:block;
+    }
+
+    .cv-btn{
+        display:none;
+    }
+
+    .hero-grid{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .hero p{
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .hero-buttons,
+    .social{
+        justify-content:center;
+    }
+
+    .about-grid{
+        grid-template-columns:1fr;
+    }
+
+    .skills-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:600px){
+
+    section{
+        padding:80px 5%;
+    }
+
+    .hero h1{
+        font-size:52px;
+    }
+
+    .hero h3{
+        font-size:20px;
+    }
+
+    .hero-image{
+        transform:scale(.75);
+        margin-top:-40px;
+    }
+
+    .skills-grid,
+    .project-grid{
+        grid-template-columns:1fr;
+    }
+
+    .timeline::before{
+        left:10px;
+    }
+
+    .timeline-item,
+    .timeline-item:nth-child(even),
+    .timeline-item:nth-child(odd){
+        width:100%;
+        left:0;
+        text-align:left;
+        padding-left:40px;
+        padding-right:0;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-dot,
+    .timeline-item:nth-child(even) .timeline-dot{
+        left:2px;
+        right:auto;
+    }
+
+    .about-info{
+        grid-template-columns:1fr;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<nav class="navbar">
+
+<a href="#home" class="logo">
+P<span>.</span> YAGNA
+</a>
+
+<ul class="nav-links" id="navLinks">
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+<a href="#" class="cv-btn">
+<i class="fa-solid fa-download"></i>
+Download CV
+</a>
+
+<div class="menu" id="menu">
+<i class="fa-solid fa-bars"></i>
+</div>
+
+</nav>
+</header>
+
+<section class="hero" id="home">
+
+<div class="hero-grid">
+
+<div class="hero-content">
+
+<div class="small-title">
+HELLO, I'M
+</div>
+
+<h1>
+YAGNA<span>.</span>
+</h1>
+
+<h3>
+Business Woman <span>|</span> Data Enthusiast
+</h3>
+
+<p>
+I am a passionate and ambitious professional who loves
+turning ideas into meaningful results. I believe in
+smart work, leadership, creativity and continuous growth.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#projects" class="btn btn-primary">
+Explore My Work
+<i class="fa-solid fa-arrow-right"></i>
+</a>
+
+<a href="#contact" class="btn btn-outline">
+Contact Me
+</a>
+
+</div>
+
+<div class="social">
+
+<a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+<a href="#"><i class="fa-brands fa-github"></i></a>
+<a href="#"><i class="fa-brands fa-instagram"></i></a>
+
+<a href="mailto:yagnapolisetty@gmail.com">
+<i class="fa-solid fa-envelope"></i>
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-image">
+
+<div class="circle"></div>
+
+<div class="floating-card card1">
+<i class="fa-solid fa-chart-line"></i>
+Business Growth
+</div>
+
+<div class="floating-card card2">
+<i class="fa-solid fa-lightbulb"></i>
+Creative Mind
+</div>
+
+<div class="woman">
+
+<div class="hair"></div>
+<div class="head"></div>
+
+<div class="eye left"></div>
+<div class="eye right"></div>
+
+<div class="mouth"></div>
+<div class="body"></div>
+<div class="shirt"></div>
+
+<div class="leg left"></div>
+<div class="leg right"></div>
+
+<div class="shoe one"></div>
+<div class="shoe two"></div>
+
+<div class="bag"></div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="about reveal" id="about">
+
+<div class="container">
+
+<div class="section-title">
+<span>About Me</span>
+<h2>Know Me Better</h2>
+<p>Passion, ambition and purpose.</p>
+</div>
+
+<div class="about-grid">
+
+<div class="about-img">
+
+<div class="about-img-box">
+<div class="about-img-inner"></div>
+</div>
+
+</div>
+
+<div class="about-content">
+
+<h3>Building Ideas Into Reality</h3>
+
+<p>
+Hello! I'm Yagna, a passionate and ambitious professional
+who enjoys working with technology, business and data.
+</p>
+
+<p>
+I love learning new things, solving problems and creating
+solutions that can make a real difference. My goal is to
+build a successful career while continuously improving
+my skills.
+</p>
+
+<div class="about-info">
+
+<div class="info-box">
+<strong>Name</strong>
+<span>Yagna</span>
+</div>
+
+<div class="info-box">
+<strong>Profession</strong>
+<span>Business & Analytics</span>
+</div>
+
+<div class="info-box">
+<strong>Location</strong>
+<span>India</span>
+</div>
+
+<div class="info-box">
+<strong>Experience</strong>
+<span>Fresher / Entry Level</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="skills" class="reveal">
+
+<div class="container">
+
+<div class="section-title">
+<span>My Skills</span>
+<h2>What I Do</h2>
+<p>Tools and technologies I work with.</p>
+</div>
+
+<div class="skills-grid">
+
+<div class="skill-card">
+<div class="skill-icon">
+<i class="fa-solid fa-database"></i>
+</div>
+<h3>SQL</h3>
+<p>Data querying, analysis and database management.</p>
+<div class="progress">
+<span data-width="90%"></span>
+</div>
+</div>
+
+<div class="skill-card">
+<div class="skill-icon">
+<i class="fa-solid fa-chart-column"></i>
+</div>
+<h3>Power BI</h3>
+<p>Interactive dashboards and business insights.</p>
+<div class="progress">
+<span data-width="90%"></span>
+</div>
+</div>
+
+<div class="skill-card">
+<div class="skill-icon">
+<i class="fa-brands fa-python"></i>
+</div>
+<h3>Python</h3>
+<p>Data analysis, automation and problem solving.</p>
+<div class="progress">
+<span data-width="75%"></span>
+</div>
+</div>
+
+<div class="skill-card">
+<div class="skill-icon">
+<i class="fa-solid fa-file-excel"></i>
+</div>
+<h3>Excel</h3>
+<p>Data cleaning, formulas and reporting.</p>
+<div class="progress">
+<span data-width="85%"></span>
+</div>
+</div>
+
+<div class="skill-card">
+<div class="skill-icon">
+<i class="fa-solid fa-chart-pie"></i>
+</div>
+<h3>Tableau</h3>
+<p>Data visualization and dashboard creation.</p>
+<div class="progress">
+<span data-width="75%"></span>
+</div>
+</div>
+
+<div class="skill-card">
+<div class="skill-icon">
+<i class="fa-solid fa-users"></i>
+</div>
+<h3>Leadership</h3>
+<p>Communication, teamwork and decision making.</p>
+<div class="progress">
+<span data-width="90%"></span>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="projects reveal" id="projects">
+
+<div class="container">
+
+<div class="section-title">
+<span>Portfolio</span>
+<h2>My Projects</h2>
+<p>Some of my favorite work.</p>
+</div>
+
+<div class="project-grid">
+
+<div class="project-card">
+<div class="project-img one"></div>
+<div class="project-content">
+<h3>Business Analytics Dashboard</h3>
+<p>
+An interactive dashboard designed to track business
+performance, revenue and important KPIs.
+</p>
+<div class="tags">
+<span>Power BI</span>
+<span>SQL</span>
+<span>Excel</span>
+</div>
+</div>
+</div>
+
+<div class="project-card">
+<div class="project-img two"></div>
+<div class="project-content">
+<h3>Sales Insight Dashboard</h3>
+<p>
+Analyzed sales data and created meaningful visualizations
+to support business decisions.
+</p>
+<div class="tags">
+<span>Power BI</span>
+<span>SQL</span>
+<span>DAX</span>
+</div>
+</div>
+</div>
+
+<div class="project-card">
+<div class="project-img three"></div>
+<div class="project-content">
+<h3>Business Intelligence Project</h3>
+<p>
+A data-driven project focused on discovering patterns,
+trends and actionable business insights.
+</p>
+<div class="tags">
+<span>Python</span>
+<span>Analytics</span>
+<span>Visualization</span>
+</div>
+</div>
+</div>
+
+<div class="project-card">
+<div class="project-img four"></div>
+<div class="project-content">
+<h3>Travel Business Website</h3>
+<p>
+A modern responsive website designed for travel users
+with an attractive and user-friendly interface.
+</p>
+<div class="tags">
+<span>HTML</span>
+<span>CSS</span>
+<span>JavaScript</span>
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="experience" class="reveal">
+
+<div class="container">
+
+<div class="section-title">
+<span>Career</span>
+<h2>My Experience</h2>
+<p>My professional journey.</p>
+</div>
+
+<div class="timeline">
+
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<h3>2025</h3>
+<h4>Business Analytics Intern</h4>
+<p>
+Worked with real-world datasets, prepared reports,
+created dashboards and generated business insights.
+</p>
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<h3>2025</h3>
+<h4>Data Analytics Training</h4>
+<p>
+Learned SQL, Excel, Power BI, Tableau and Python
+with practical projects.
+</p>
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<h3>2024</h3>
+<h4>Graduation</h4>
+<p>
+Completed graduation and started building a career
+in technology and business analytics.
+</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="contact reveal" id="contact">
+
+<div class="container">
+
+<div class="section-title">
+<span>Contact</span>
+<h2>Let's Connect</h2>
+<p>Have a project or opportunity? Let's talk.</p>
+</div>
+
+<div class="contact-grid">
+
+<div class="contact-info">
+
+<h3>Get In Touch</h3>
+
+<p>
+I'm always open to discussing new opportunities,
+creative ideas and interesting projects.
+</p>
+
+<div class="contact-item">
+<div class="contact-icon">
+<i class="fa-solid fa-envelope"></i>
+</div>
+<div>
+<strong>Email</strong><br>
+<span>yagnapolisetty@gmail.com</span>
+</div>
+</div>
+
+<div class="contact-item">
+<div class="contact-icon">
+<i class="fa-solid fa-phone"></i>
+</div>
+<div>
+<strong>Phone</strong><br>
+<span>+91 6305040283</span>
+</div>
+</div>
+
+<div class="contact-item">
+<div class="contact-icon">
+<i class="fa-solid fa-location-dot"></i>
+</div>
+<div>
+<strong>Location</strong><br>
+<span>India</span>
+</div>
+</div>
+
+</div>
+
+<form class="contact-form" id="contactForm">
+
+<div class="form-group">
+<input type="text" placeholder="Your Name" required>
+</div>
+
+<div class="form-group">
+<input type="email" placeholder="Your Email" required>
+</div>
+
+<div class="form-group">
+<textarea placeholder="Your Message" required></textarea>
+</div>
+
+<button class="btn btn-primary submit">
+Send Message
+<i class="fa-solid fa-paper-plane"></i>
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+<p>
+© 2026 <span>Yagna</span>. All Rights Reserved.
+</p>
+</footer>
+
+<script>
+
+const menu = document.getElementById("menu");
+const navLinks = document.getElementById("navLinks");
+
+menu.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+});
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+    });
+});
+
+const reveals = document.querySelectorAll(".reveal");
+
+function revealOnScroll(){
+
+    reveals.forEach(element => {
+
+        const windowHeight = window.innerHeight;
+        const elementTop = element.getBoundingClientRect().top;
+
+        if(elementTop < windowHeight - 100){
+            element.classList.add("active");
+        }
+
+    });
+
+}
+
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();
+
+const progressBars = document.querySelectorAll(".progress span");
+
+const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if(entry.isIntersecting){
+
+            const width =
+            entry.target.getAttribute("data-width");
+
+            entry.target.style.width = width;
+
+        }
+
+    });
+
+},{threshold:.5});
+
+progressBars.forEach(bar => {
+    observer.observe(bar);
+});
+
+document.getElementById("contactForm")
+.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    alert("Thank you! Your message has been received.");
+
+    this.reset();
+
+});
+
+</script>
+
+</body>
+</html>
